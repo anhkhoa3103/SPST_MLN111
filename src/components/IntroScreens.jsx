@@ -6,12 +6,6 @@ import CharCard from "./CharCard";
 // StartScreen — màn hình mở đầu
 // ═══════════════════════════════════════════════════════
 export function StartScreen({ onNext }) {
-  const chars = [
-    { key: "duy",   color: "var(--duy)",              label: "Duy",   fallen: false },
-    { key: "trong", color: "rgba(200,200,200,0.35)",   label: "Trọng", fallen: true  },
-    { key: "phat",  color: "var(--phat)",              label: "Phát",  fallen: false },
-  ];
-
   return (
     <div style={{
       position: "fixed", inset: 0, zIndex: 100,
@@ -20,7 +14,7 @@ export function StartScreen({ onNext }) {
       background: "var(--bg)", padding: "24px",
     }}>
       <div style={{
-        fontFamily: "var(--mono)", fontSize: "10px", letterSpacing: "5px",
+        fontFamily: "var(--mono)", fontSize: "13px", letterSpacing: "5px",
         color: "var(--muted)", textTransform: "uppercase", marginBottom: "18px",
       }}>
         một tòa án nhận thức
@@ -32,48 +26,18 @@ export function StartScreen({ onNext }) {
         fontWeight: "700", letterSpacing: "-4px",
         color: "var(--text)", lineHeight: "1", marginBottom: "4px",
       }}>
-        PHÒNG <em style={{ fontStyle: "italic", color: "var(--gold)" }}>312</em>
+        Phụ <em style={{ fontStyle: "italic", color: "var(--gold)" }}>Tử</em>
       </div>
 
       <div style={{ width: "1px", height: "44px", background: "var(--border)", margin: "0 auto 26px" }} />
-
-      {/* Mini character previews */}
-      <div style={{ display: "flex", gap: "28px", alignItems: "flex-end", marginBottom: "28px" }}>
-        {chars.map((c) => {
-          const char = CHARACTERS[c.key];
-          return (
-            <div key={c.key} style={{ textAlign: "center" }}>
-              <div style={{
-                width: "44px", height: "44px", borderRadius: "50%",
-                border: `1px ${c.fallen ? "dashed" : "solid"} ${c.color}`,
-                opacity: c.fallen ? 0.5 : 1,
-                background: `${c.color}10`,
-                display: "flex", alignItems: "center", justifyContent: "center",
-                overflow: "hidden", margin: "0 auto 6px",
-              }}>
-                {char.avatar
-                  ? <img src={char.avatar} alt={c.label} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }} onError={(e) => e.target.style.display = "none"} />
-                  : <span style={{ fontFamily: "var(--serif)", fontSize: "16px", fontStyle: "italic", color: c.color, opacity: 0.6 }}>{c.label[0]}</span>
-                }
-              </div>
-              <div style={{
-                fontFamily: "var(--mono)", fontSize: "8px", letterSpacing: "2px",
-                color: c.fallen ? "rgba(200,200,200,0.25)" : c.color,
-                textTransform: "uppercase",
-              }}>
-                {c.label}
-              </div>
-            </div>
-          );
-        })}
-      </div>
 
       <div style={{
         fontFamily: "var(--serif)", fontSize: "clamp(14px,2vw,17px)",
         color: "var(--muted)", textAlign: "center", lineHeight: "1.9",
         marginBottom: "40px", fontStyle: "italic", maxWidth: "340px",
       }}>
-        Ba người bước vào.<br />Chỉ hai người bước ra.<br />Bạn sẽ phán xét ai?
+        Sự thật không phụ thuộc vào người đang nhìn nó.<br />
+        Nhưng phán xét thì có.
       </div>
 
       <GhostButton onClick={onNext}>Bắt đầu xét xử</GhostButton>

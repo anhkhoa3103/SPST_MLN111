@@ -55,7 +55,7 @@ export const ENDINGS = {
     errorText:
       "Đây là lập trường gần nhất với chủ nghĩa duy vật biện chứng.\n\nBạn không phủ nhận sự thật. Bạn cũng không nói rằng mọi giả thuyết đều ngang nhau. Bạn chỉ phân biệt giữa cái đã được kiểm chứng và cái mới chỉ có thể suy luận.\n\nĐó là điểm khác nhau giữa nhận thức thận trọng và hoài nghi luận:\nHoài nghi luận nói: 'Không thể biết sự thật.'\nDuy vật biện chứng nói: 'Có sự thật khách quan, nhưng muốn biết nó, ta phải có điều kiện kiểm chứng đúng.'",
     truth:
-      "Chị Lan đặt lên bàn một phong bì cũ. Bên trong là bản sao hồ sơ bệnh án: ung thư tụy giai đoạn cuối.\n\nPhía sau tờ kết quả, có một dòng chữ viết tay: \"Nếu anh không còn thời gian, ít nhất đừng để hai đứa nó mất hết.\"\n\n\"Anh ấy biết chuyện lô đất. Biết chuyện tiền của Duy. Biết cả việc nếu bị khởi tố, mọi thứ sẽ bị phong tỏa.\"\n\nDuy nhìn dòng chữ rất lâu. Phát cúi mặt.\n\n\"Anh ấy nói anh ấy phải đi xa một thời gian. Nhờ em gặp hai anh, nói rằng anh ấy thương hai anh như em ruột.\"\n\nKhông ai hỏi thêm.",
+      "Chị Lan đặt lên bàn một phong bì cũ. Bên trong là bản sao hồ sơ bệnh án: ung thư tụy giai đoạn cuối.\n\nPhía sau tờ kết quả, có một dòng chữ viết tay: \"Nếu anh không còn thời gian, ít nhất đừng để hai đứa nó mất hết.\"\n\n\"Anh ấy biết chuyện lô đất. Biết chuyện tiền của Duy. Biết cả việc nếu bị khởi tố, mọi thứ sẽ bị phong tỏa.\"\n\nBên trong tập hồ sơ còn có một tờ giấy thẩm định đất, và tờ giấy sao kê số tiền mà Trọng đã chuyển khoản ngược lại cho công ty.\n\nDuy nhìn dòng chữ rất lâu. Phát cúi mặt.\n\n\"Anh ấy nói anh ấy phải đi xa một thời gian. Nhờ em gặp hai anh, nói rằng anh ấy thương hai anh như em ruột.\"\n\nKhông ai hỏi thêm.",
     philosophy:
       "Bạn đã dừng lại khi chưa đủ căn cứ.\nKhông phải vì bạn không thể suy luận.\nMà vì bạn biết suy luận không thay thế được sự thật.\n\nNhận thức đúng không phải là nhận thức chắc chắn nhất về mặt cảm xúc.\nNhận thức đúng là nhận thức phù hợp với hiện thực khách quan và chịu được kiểm chứng thực tiễn.\n\nĐó là điểm khởi đầu của sự trung thực trong tư duy.",
   },
@@ -67,10 +67,28 @@ export const CONCLUSION =
 
 // ── Câu hỏi mở ────────────────────────────────────────────
 export const OPEN_QUESTION =
-  `Nhưng còn một chi tiết chưa bao giờ được giải thích hoàn toàn.\n\nLọ phụ tử nằm trong bụi cây dưới phòng Trọng.\nĐã mở. Gần hết. Dấu tay bị mưa làm mờ, không xác định được.\n\nLọ phụ tử Trọng mua ở Đà Lạt không được tìm thấy trong hành lý.\nLọ của Phát còn nguyên trong vali.\nLọ của Duy được tìm thấy trong thùng rác bên ngoài cửa hàng tiện lợi.\n\nVậy lọ dưới bụi cây là của ai?\n\nNếu đó là lọ của Trọng, giả thuyết Trọng tự dùng độc rồi ném lọ ra ngoài cửa sổ trở nên rất mạnh.\nNhưng "rất mạnh" vẫn chưa phải "đã được chứng minh".\n\nNếu đó không phải lọ của Trọng:\nCó người đã dùng một lọ thuốc không thuộc về mình.\nCó người đã tráo đổi lọ thuốc.\nHoặc có một chi tiết điều tra mà bạn chưa từng được thấy.\n\nĐến đây, bạn có thể lại muốn chọn ngay một câu trả lời.\nNhưng hãy dừng lại một giây.\n\nĐiều gì trong số đó đã được kiểm chứng?\nĐiều gì chỉ mới là khả năng?\nĐiều gì là dữ kiện? Điều gì là cảm giác đang tìm một câu chuyện để bám vào?\n\nCâu hỏi này không có đáp án ở đây.\nKhông phải vì sự thật không tồn tại.\nMà vì tác phẩm không trao cho bạn đủ thực tiễn kiểm chứng để kết luận cuối cùng về lọ thuốc ấy.\n\nSau tất cả, bạn sẽ làm gì với một khoảng trống trong nhận thức?\nLấp nó bằng cảm xúc?\nLấp nó bằng giả thuyết hợp lý nhất?\nHay thừa nhận rằng chân lý tồn tại, nhưng bạn chưa có đủ căn cứ để chạm tới nó?\n\nĐó là ranh giới giữa "có quyền nghĩ khác" và "nghĩ đúng".\nQuyền nghĩ khác thuộc về bạn.\nNhưng chân lý không thuộc về bạn.\nNó thuộc về hiện thực.`;
+  `Nhưng còn một điều chưa có giải đáp.
+
+Hai ngày sau khi Trọng chết, cảnh sát tìm thấy một lọ phụ tử dưới bụi cây — ngay dưới cửa sổ phòng 312.
+
+Đã mở. Gần hết. Dấu vân tay mờ do mưa.
+
+Lọ của Trọng mua ở Đà Lạt — biến mất không dấu vết.
+Lọ của Phát — còn nguyên trong vali.
+Lọ của Duy — đã vứt lúc 22:19.
+
+Vậy lọ dưới bụi cây là của ai?
+
+Nếu là của Trọng — mọi thứ khớp.
+Nếu không phải — có người đang giấu điều gì đó.
+
+Và không ai có câu trả lời.`;
 
 export const OPEN_QUESTION_FINAL =
-  `Câu hỏi này không có đáp án ở đây.\nNhưng sự thật về lọ thuốc đó tồn tại — dù bạn có tìm ra hay không.\n\nĐó là điều duy vật biện chứng khẳng định:\nChân lý không phụ thuộc vào nhận thức của bạn.\nNó chỉ chờ được kiểm chứng đúng cách.`;
+  `Bạn vừa phán xét một vụ án.
+Nhưng câu hỏi này — bạn có dám để nó mở không?
+
+Hay bạn sẽ lại tìm một câu trả lời để tin vào?`;
 
 // ── Tên chương ────────────────────────────────────────────
 export const CHAPTER_NAMES = {

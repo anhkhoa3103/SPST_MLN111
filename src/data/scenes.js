@@ -130,8 +130,8 @@ export const SCENES = [
       "Trọng nhìn ra cửa sổ.",
     ],
     images: [
-      { src: "img/alone-room.jpg", caption: "Một mình", pos: 1 },
-      { src: "img/wine-half.jpg", caption: "Chai rượu còn một nửa", pos: 0 },
+      { src: "img/trong-window.jpg", caption: "Chỉ còn 2 người", pos: 1 },
+      { src: "img/wine-glass.jpg", caption: "Chai rượu còn một nửa", pos: 0 },
     ],
   },
 
@@ -146,7 +146,7 @@ export const SCENES = [
     ],
     images: [
       { src: "img/body-found.jpg", caption: "Phòng 312 — sáng hôm sau", pos: 1 },
-      { src: "img/phone-calls.jpg", caption: "Gọi Duy 3 lần trước 113", pos: 0 },
+      { src: "img/missed-call.jpg", caption: "Gọi Duy 3 lần trước 113", pos: 0 },
     ],
   },
 
@@ -160,14 +160,14 @@ export const SCENES = [
       "Trọng được tìm thấy chết trong phòng khóa từ bên trong. Nghi là do ngộ độc.",
       "Phát là người mang rượu đến, và đã gọi cho Duy 3 lần trước khi gọi 113.",
     ],
-    images: [{ src: "img/wine-glass-evidence.jpg", caption: "Ly rượu có độc", pos: 1 }],
+    images: [{ src: "img/glass-floor.jpg", caption: "Ly rượu có độc", pos: 1 }],
     question: "Ngay lúc này — khi chỉ có biểu hiện, thời gian và cảm giác ban đầu, bạn nghi ai?",
     options: [
       { text: "Duy", shift: -22 },
       { text: "Phát", shift: 25 },
       { text: "Chưa đủ thông tin", shift: 0 },
     ],
-    timer: 20,
+    timer: 50,
     feedback: "Đây là phán đoán cảm tính đầu tiên của bạn. Nó có thể cần thiết. Nhưng cái hiện ra trước mắt chưa chắc là cái đang tồn tại trong bản chất.",
   },
 
@@ -186,9 +186,9 @@ export const SCENES = [
       "Kết luận: ai đó đã bỏ độc trực tiếp vào ly của Trọng.Dấu vân tay không đủ rõ để xác định người cuối cùng chạm vào ly, do hơi ẩm và việc ly đã bị dịch chuyển khi phát hiện thi thể.",
     ],
     images: [
-      { src: "img/forensic.jpg", caption: "Báo cáo pháp y", pos: 0 },
-      { src: "img/poison-diagram.jpg", caption: "Aconitine — chất độc", pos: 1 },
-      { src: "img/wine-glass-evidence.jpg", caption: "Vật chứng — ly rượu", pos: 2 },
+      { src: "img/forensic-report.jpg", caption: "Báo cáo pháp y", pos: 0 },
+      { src: "img/poison-evidence.jpg", caption: "Aconitine — chất độc", pos: 1 },
+      { src: "img/glass-floor.jpg", caption: "Vật chứng — ly rượu", pos: 2 },
     ],
   },
 
@@ -196,18 +196,15 @@ export const SCENES = [
     id: "s2-2", chapter: 2, type: "story",
     label: "Màn 2.2", title: "Động cơ tài chính — Phát",
     lines: [
-      "Ngân hàng xác nhận: Phát đang nợ 3.4 tỷ, đáo hạn trong 6 tuần.",
-      "Lô đất Đà Lạt là dự án hợp tác — Trọng góp 40%, Phát góp 60%. Hợp đồng có điều khoản mua lại: nếu một bên tử vong, bên còn lại được mua phần góp vốn theo giá tại thời điểm ký — thấp hơn giá thị trường hiện tại gần 50%.",
-      "Hợp đồng cũng có điều khoản bảo hiểm nhân thọ chéo. Mỗi bên mua bảo hiểm cho bên kia, người thụ hưởng là đối tác, nhằm bảo đảm dòng tiền mua lại phần vốn nếu một bên qua đời.",
-      "Nếu Trọng chết trước khi bị khởi tố, Phát có thể nhận tiền bảo hiểm, mua lại phần vốn của Trọng theo giá cũ, rồi bán toàn bộ dự án theo giá thị trường.",
-      "Số tiền đó đủ để Phát trả khoản nợ 3.4 tỷ.",
+      "Ngân hàng xác nhận: Phát đang nợ 3.4 tỷ, đáo hạn trong 6 tuần. Lô đất Đà Lạt là dự án hợp tác — Trọng góp 40%, Phát góp 60%. Hợp đồng có điều khoản mua lại: nếu một bên tử vong, bên còn lại được mua phần góp vốn theo giá tại thời điểm ký — thấp hơn giá thị trường hiện tại gần 50%. Hợp đồng cũng có điều khoản bảo hiểm nhân thọ chéo. Mỗi bên mua bảo hiểm cho bên kia, người thụ hưởng là đối tác, nhằm bảo đảm dòng tiền mua lại phần vốn nếu một bên qua đời.",
+      "Nếu Trọng chết trước khi bị khởi tố, Phát có thể nhận tiền bảo hiểm, mua lại phần vốn của Trọng theo giá cũ, rồi bán toàn bộ dự án theo giá thị trường. Số tiền đó đủ để Phát trả khoản nợ 3.4 tỷ.",
       "Nếu Trọng sống và rút theo giá thị trường → Phát không đủ tiền mua lại → phải thanh lý → không kịp trả nợ.",
       "Phát có biết về điều khoản bảo hiểm này trước khi Trọng chết không — không ai biết.",
       "Cảnh sát cho rằng Phát có động cơ khá rõ ràng",
     ],
     images: [
       { src: "img/debt-document.jpg", caption: "Nợ 3.4 tỷ — đáo hạn 6 tuần", pos: 0 },
-      { src: "img/handwritten-list.jpg", caption: "Điều khoản hợp đồng", pos: 1 },
+      { src: "img/hopdong.jpg", caption: "Điều khoản hợp đồng", pos: 1 },
     ],
   },
 
@@ -224,7 +221,6 @@ export const SCENES = [
       "Dữ liệu khóa cho thấy sau khi Phát rời đi, cửa không được mở từ bên ngoài thêm lần nào.",
     ],
     images: [
-      { src: "img/timestamp.jpg", caption: "Khung thời gian", pos: 0 },
       { src: "img/hotel-camera.jpg", caption: "Camera xác nhận", pos: 1 },
     ],
   },
@@ -234,23 +230,18 @@ export const SCENES = [
     label: "Màn 2.4", title: "Cuộc gọi bị xóa",
     lines: [
       "Cảnh sát trích xuất dữ liệu điện thoại của Phát.",
-      "22:02 - Phát nhận cuộc gọi từ số của Duy.Thời lượng: 30 giây.",
-      "Cuộc gọi bị xóa khỏi nhật ký máy của Phát. Điều tra viên hỏi: \“Nội dung cuộc gọi là gì?\”",
+      "22:02 - Phát nhận cuộc gọi từ số của Duy.Thời lượng: 30 giây. Cuộc gọi bị xóa khỏi nhật ký máy của Phát. Điều tra viên hỏi: \“Nội dung cuộc gọi là gì?\”",
       "Phát đáp:\“Tôi không nhớ rõ. Duy gọi lúc tôi đang bực. Tôi ra ngoài nghe, cậu ấy nói gì đó kiểu đừng căng quá. Tôi xóa vì... tôi không muốn bị hiểu lầm.\”",
       "Cảnh sát hỏi Duy:\“Anh có gọi cho Phát lúc 22:02 không?\”",
       "Duy im lặng một lúc.\“Có. Tôi thấy Phát mất bình tĩnh nên gọi bảo nó đừng cãi nữa. Tôi sợ Trọng mệt.\”",
       "\“Tại sao không nói ngay từ đầu?\”",
       "Duy cúi mặt: \“Vì tôi biết cuộc gọi đó khiến tôi trông rất đáng nghi.\”",
       "Sáng hôm sau, Phát gọi Duy ba lần trước khi gọi cảnh sát.",
-      "Phát giải thích:",
-      "\“Tôi hoảng. Tôi không biết phải làm gì. Duy là người đầu tiên tôi nghĩ tới.\”",
-      "Cảnh sát ghi chú:",
-      "",
-      "Cuộc gọi đáng nghi, nhưng chưa xác minh được nội dung.",
+      "Phát giải thích: \“Tôi hoảng. Tôi không biết phải làm gì. Duy là người đầu tiên tôi nghĩ tới.\”",
+      "Cảnh sát ghi chú: Cuộc gọi đáng nghi, nhưng chưa xác minh được nội dung.",
     ],
     images: [
-      { src: "img/timestamp.jpg", caption: "Khung thời gian", pos: 0 },
-      { src: "img/hotel-camera.jpg", caption: "Camera xác nhận", pos: 1 },
+      { src: "img/hanh-lang.jpg", caption: "Phát ra ngoài nghe điện thoại", pos: 0 },
     ],
   },
 
@@ -271,7 +262,7 @@ export const SCENES = [
       { text: "Duy và Phát có liên hệ đáng ngờ", shift: 10 },
       { text: "Chưa đủ để kết luận", shift: 0 },
     ],
-    timer: 20,
+    timer: 50,
     feedback: "Bạn đã chuyển từ cảm giác sang suy luận. Đó là một bước tiến. Nhưng động cơ chỉ cho thấy một người có lý do. Nó chưa chứng minh người đó đã hành động. Hãy cùng khám phá tiếp",
   },
 
@@ -290,8 +281,7 @@ export const SCENES = [
       "Dữ kiện này khiến Duy khó có thể quay lại phòng 312 sau 22:00 mà không bị camera hành lang ghi lại. Nhưng nó không loại trừ khả năng Duy đã làm gì đó trước khi rời phòng.",
     ],
     images: [
-      { src: "img/hotel-camera.jpg", caption: "Camera CCTV hành lang", pos: 0 },
-      { src: "img/timestamp.jpg", caption: "22:02 — Duy rời đi", pos: 1 },
+      { src: "img/convinience-store.jpg", caption: "Cửa hàng tiện lợi", pos: 2 },
     ],
   },
 
@@ -309,8 +299,7 @@ export const SCENES = [
       "Quá đơn giản để không đáng nghi.",
     ],
     images: [
-      { src: "img/deleted-call.jpg", caption: "Cuộc gọi bị xóa", pos: 1 },
-      { src: "img/call-log.jpg", caption: "Chỉ cuộc gọi này bị xóa", pos: 0 },
+      { src: "img/thung-rac.jpg", caption: "Thùng rác", pos: 1 },
     ],
   },
 
@@ -328,7 +317,7 @@ export const SCENES = [
     ],
     images: [
       { src: "img/herb-shop.jpg", caption: "Tiệm thuốc — Duy là khách quen", pos: 0 },
-      { src: "img/aconitine.jpg", caption: "Phụ tử — anh ta biết từ trước", pos: 1 },
+      { src: "img/phu-tu-thuoc.jpg", caption: "Phụ tử — anh ta biết từ trước", pos: 1 },
     ],
   },
 
@@ -344,8 +333,8 @@ export const SCENES = [
       "Hay về cái chết của Trọng",
     ],
     images: [
-      { src: "img/atm-receipt.jpg", caption: "Giao dịch đáng ngờ", pos: 0 },
-      { src: "img/forensic.jpg", caption: "Sổ sách nội bộ", pos: 1 },
+      { src: "img/atm-receipt.png", caption: "Giao dịch đáng ngờ", pos: 0 },
+      { src: "img/accouting-report.jpeg", caption: "Sổ sách nội bộ", pos: 1 },
     ],
   },
 
@@ -359,14 +348,14 @@ export const SCENES = [
       "Duy vứt một lọ phụ tử gần hết vào thùng rác trước cửa hàng tiện lợi — đúng tối hôm đó.",
       "Duy có khoản tiền bất thường gần 500 triệu đồng được chuyển từ công ty con của Trọng vào tài khoản cá nhân trong 8 tháng qua.",
     ],
-    images: [{ src: "img/vial-empty.jpg", caption: "Lọ phụ tử gần hết", pos: 1 }],
+    images: [{ src: "img/phu-tu-thuoc.jpg", caption: "Lọ phụ tử gần hết", pos: 1 }],
     question: "Lọ phụ tử Duy vứt đi khiến bạn đánh giá thế nào?",
     options: [
       { text: "Duy rất đáng nghi", shift: -25 },
       { text: "Duy có thể đang nói thật", shift: 10 },
       { text: "Không chắc", shift: 0 },
     ],
-    timer: 20,
+    timer: 50,
     feedback: "Một vật chứng không tự mang sẵn ý nghĩa cuối cùng.Nó chỉ có giá trị khi được đặt trong toàn bộ quan hệ: thời gian, hành động, động cơ, điều kiện và các vật chứng khác. Nếu tách vật chứng khỏi hệ thống ấy, ta rất dễ bắt nó nói điều ta muốn nghe.",
   },
 
@@ -388,9 +377,8 @@ export const SCENES = [
       "Nhưng thật ra, nó chỉ đang rối theo một cách có trật tự hơn.",
     ],
     images: [
-      { src: "img/vial-empty.jpg", caption: "Lọ Duy vứt — gần hết", pos: 0 },
-      { src: "img/vial-sealed.jpg", caption: "Lọ Phát — còn nguyên", pos: 1 },
-      { src: "img/suitcase.jpg", caption: "Giấu trong vali", pos: 2 },
+      { src: "img/phu-tu.jpg", caption: "Lọ Duy vứt — gần hết", pos: 0 },
+      { src: "img/phu-tu-phat.jpg", caption: "Lọ Phát — còn nguyên", pos: 1 },
     ],
   },
 
@@ -407,7 +395,7 @@ export const SCENES = [
       "Điều tra viên ghi vào hồ sơ: Lọ thuốc dưới bụi cây có thể là lọ của Trọng.",
       "Nhưng không có cách nào xác nhận tuyệt đối. Nếu đó là lọ của Trọng, giả thuyết Trọng tự dùng độc rồi ném lọ qua cửa sổ trở nên rất mạnh. Nếu không phải, vụ án có một khoảng trống lớn hơn nhiều.",
     ],
-    images: [{ src: "img/vial-bush.jpg", caption: "Lọ thuốc dưới bụi cây", pos: 1 }],
+    images: [{ src: "img/phu-tu-buicay.jpg", caption: "Lọ thuốc dưới bụi cây", pos: 1 }],
   },
 
   {
@@ -421,9 +409,7 @@ export const SCENES = [
       "Nhưng lại mở ra bước ngoặc mới về thuốc độc",
     ],
     images: [
-      { src: "img/medical-record.jpg", caption: "Hồ sơ bệnh án — bảo mật", pos: 0 },
-      { src: "img/investigation.jpg", caption: "Điều tra tham nhũng", pos: 1 },
-      { src: "img/wife-silent.jpg", caption: "Vợ Trọng — chị Lan", pos: 2 },
+      { src: "img/ho-so-benh-an.jpg", caption: "Hồ sơ bệnh án — bảo mật", pos: 0 },
     ],
   },
 
@@ -434,18 +420,15 @@ export const SCENES = [
       "Cơ quan chức năng xác nhận Trọng đang trong diện điều tra tham nhũng.",
       "Việc khởi tố dự kiến có thể xảy ra trong vài tuần. Nếu bị khởi tố, tài sản của Trọng sẽ bị phong tỏa. Bao gồm cổ phần của anh trong dự án Đà Lạt.",
       "Điều đó đồng nghĩa: Phát không thể sử dụng dự án để xoay khoản nợ 3.4 tỷ. Và Duy, với tư cách kế toán nội bộ, có nguy cơ bị kéo vào điều tra dòng tiền.",
-      "Trong hồ sơ kế toán, cảnh sát tìm thấy Trọng đã chuyển khoảng vào lại tài khoản công ty số tiền 505 triệu 650 nghìn. Khớp từng con số với số tiền chuyển vào tài khoản Duy.",
+      "Trong hồ sơ kế toán, cảnh sát tìm thấy Trọng đã chuyển khoảng vào lại tài khoản công ty số tiền 505.650.000 nghìn. Khớp từng con số với số tiền chuyển vào tài khoản Duy.",
       "Điều tra viên hỏi Duy: \“Anh có biết Trọng đã biết chuyện tiền bạc không?\”",
-      "Duy sững người: \“Không.”",
-      "\“Anh ấy chưa từng hỏi anh?\”",
+      "Duy sững người: \“Không.” - \“Anh ấy chưa từng hỏi anh?\”",
       "Duy lắc đầu. Mắt đỏ hơn: \“Anh ấy chỉ bảo tôi dạo này làm việc cẩn thận hơn.\”",
       "Lúc đó, Duy tưởng Trọng đang cảnh cáo.",
       "Bây giờ, anh không còn chắc nữa."
     ],
     images: [
-      { src: "img/medical-record.jpg", caption: "Hồ sơ bệnh án — bảo mật", pos: 0 },
-      { src: "img/investigation.jpg", caption: "Điều tra tham nhũng", pos: 1 },
-      { src: "img/wife-silent.jpg", caption: "Vợ Trọng — chị Lan", pos: 2 },
+      { src: "img/investigation.webp", caption: "Điều tra tham nhũng", pos: 1 },
     ],
   },
 
@@ -454,27 +437,24 @@ export const SCENES = [
     label: "Màn 3.5", title: "Chị Lan",
     lines: [
       "Vợ Trọng, chị Lan, được mời đến làm việc.",
-      "Chị mặc áo tối màu, tóc buộc gọn.Suốt buổi, chị trả lời rất ít.",
+      "Chị mặc áo tối màu, tóc buộc gọn. Suốt buổi, chị trả lời rất ít.",
       "Điều tra viên hỏi:\“Chị có biết anh Trọng đang bệnh không?\” - Chị im lặng.",
       "\“Chị có biết anh ấy đang bị điều tra không?\” - Chị vẫn im lặng.",
-      "\“Trước chuyến đi, anh ấy có nói gì đặc biệt không?\” - Lúc này, chị mới ngẩng lên.\”",
-      "\“Không.”",
-      "\“Anh ấy nói anh ấy phải đi xa một thời gian.\”",
+      "\“Trước chuyến đi, anh ấy có nói gì đặc biệt không?\” - Lúc này, chị mới ngẩng lên.",
+      "\“Không. Anh ấy nói anh ấy phải đi xa một thời gian.\”",
       "\“Đi xa là đi đâu?\”",
       "Chị nhìn xuống hai bàn tay mình: \“Tôi không hỏi\”",
       "\“Vì sao?\” - \"“Vì có những câu trả lời, nếu hỏi ra, mình sẽ phải ngăn lại.\”",
       "Sau đó chị không nói thêm gì nữa.",
     ],
     images: [
-      { src: "img/medical-record.jpg", caption: "Hồ sơ bệnh án — bảo mật", pos: 0 },
-      { src: "img/investigation.jpg", caption: "Điều tra tham nhũng", pos: 1 },
-      { src: "img/wife-silent.jpg", caption: "Vợ Trọng — chị Lan", pos: 2 },
+      { src: "img/chi-lan.jpg", caption: "Vợ Trọng — chị Lan", pos: 2 },
     ],
   },
 
   // ── ĐIỂM NGOẶT 4 ──
   {
-    id: "q4", chapter: 2, type: "question",
+    id: "q4", chapter: 3, type: "question",
     label: "Điểm ngoặt 4", title: "Khả năng nào đang mạnh nhất?",
     lines: [
       "Lọ của Trọng — biến mất.",
@@ -492,7 +472,7 @@ export const SCENES = [
       { text: "Trọng tự dùng rồi vứt lọ", shift: 0 },
       { text: "Chưa thể xác định", shift: 0 },
     ],
-    timer: 20,
+    timer: 50,
     feedback: "Bạn đang đứng trước nhiều khả năng. Để trở thành kết luận, một khả năng phải được kiểm chứng và phải giải thích được các dữ kiện tốt hơn những khả năng còn lại.",
   },
 
@@ -501,23 +481,20 @@ export const SCENES = [
     label: "Màn 3.6", title: "Đối chiếu giả thuyết",
     lines: [
       "Cảnh sát dựng lại ba giả thuyết chính.",
-      "Giả thuyết Duy: Duy có động cơ vì khoản tiền 500 triệu. Duy biết rõ phụ tử. Duy có lọ thuốc đã mở. Nhưng Duy rời phòng lúc 22:00. Thời điểm Trọng uống độc ước tính 22:10-22:30. Camera cho thấy Duy đã vứt lọ thuốc ở bãi rác trước cửa hàng tiện lợi lúc 22:19. Nhưng anh hoàn toàn có thể bỏ độc vào ly từ trước và Trọng chỉ uống sau đó.",
-      "Giả thuyết Phát: Phát có động cơ tài chính mạnh. Phát ở lại một mình với Trọng đến 22:20. Phát có cơ hội trực tiếp. Nhưng lọ thuốc của Phát còn nguyên. Nhưng vẫn có thể đặt nghi vấn về việc Phát dùng lọ của Trọng, hoặc dùng lọ của mình sau đó lấy đi lọ của Trọng.",
-      "Giả thuyết thông đồng: Duy gọi Phát lúc 22:02. Phát gọi Duy ba lần trước khi gọi cảnh sát. Nội dung cuộc gọi không xác minh được. Nhưng nếu hai người có thông đồng, họ hoàn toàn có thể đã lên kế hoạch trước để một người bỏ độc vào ly, người kia vứt lọ thuốc đi sau đó. Và cũng như thống nhất lời khai trước cảnh sát",
-      "Giả thuyết Trọng tự dùng độc. Trọng có bệnh nặng và sắp bị khởi tố. Lọ của Trọng biến mất và xuất hiện ngoài cửa sổ và không ai vào sau khi Phát rời đi. Nhưng giả thuyết này không giải thích được động cơ của Trọng, cũng như việc Phát và Duy có những hành động đáng ngờ sau đó.",
-      "Trên bìa chỉ ghi một dòng",
-      "\"Chưa đủ căn cứ khởi tố nghi phạm về hành vi giết người\"",
+      "Giả thuyết Duy: Duy có động cơ vì khoản tiền 500 triệu, biết rõ phụ tử và có lọ thuốc đã mở. Nhưng Duy rời phòng lúc 22:00 cách thời điểm Trọng uống độc khoảng 10-30 phút. Duy đã vứt lọ thuốc ở bãi rác trước cửa hàng tiện lợi lúc 22:19. Nhưng Duy hoàn toàn có thể bỏ độc vào ly từ trước và Trọng chỉ uống sau đó.",
+      "Giả thuyết Phát: Phát có động cơ tài chính mạnh. Phát ở lại một mình với Trọng đến 22:20, có cơ hội trực tiếp. Nhưng lọ thuốc của Phát còn nguyên. Nhưng vẫn có thể đặt nghi vấn về việc Phát dùng lọ của Trọng, hoặc dùng lọ của mình sau đó lấy đi lọ của Trọng.",
+      "Giả thuyết thông đồng: Duy gọi Phát lúc 22:02. Phát gọi Duy ba lần trước khi gọi cảnh sát. Nội dung cuộc gọi không xác minh được. Nhưng nếu hai người có thông đồng, họ hoàn toàn có thể đã lên kế hoạch trước để một người bỏ độc vào ly, người kia vứt lọ thuốc đi sau đó.",
+      "Giả thuyết Trọng tự dùng độc. Trọng có bệnh nặng và sắp bị khởi tố. Lọ của Trọng biến mất. Có một lọ khác xuất hiện ngoài cửa sổ và nhưng không chắc là của Trọng. Nhưng giả thuyết này không giải thích được động cơ của Trọng.",
+      "Trên bìa chỉ ghi một dòng: \"Chưa đủ căn cứ khởi tố nghi phạm về hành vi giết người\"",
     ],
     images: [
-      { src: "img/medical-record.jpg", caption: "Hồ sơ bệnh án — bảo mật", pos: 0 },
-      { src: "img/investigation.jpg", caption: "Điều tra tham nhũng", pos: 1 },
-      { src: "img/wife-silent.jpg", caption: "Vợ Trọng — chị Lan", pos: 2 },
+      { src: "img/bang-dieu-tra.jpg", caption: "Vợ Trọng — chị Lan", pos: 2 },
     ],
   },
 
   // ── ĐIỂM NGOẶT 5 — Phán quyết tạm thời ──
   {
-    id: "q5", chapter: 2, type: "question",
+    id: "q5", chapter: 3, type: "question",
     label: "Điểm ngoặt 5", title: "Bạn có dám dừng lại?",
     lines: [
       "Duy đáng nghi vì tiền, phụ tử và lọ thuốc đã vứt.",
@@ -535,7 +512,7 @@ export const SCENES = [
       { text: "Cả hai thông đồng", shift: 0 },
       { text: "Chưa đủ dữ kiện để kết tội ai", shift: 0 },
     ],
-    timer: 20,
+    timer: 50,
     feedback: "Bạn đã chọn một kết luận. Kết luận của bạn hoàn toàn hợp lý và có căn cứ, nhưng liệu hợp lý có là chân lý của sự thật không?",
   },
 

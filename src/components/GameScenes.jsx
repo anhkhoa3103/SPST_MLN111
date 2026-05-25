@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import ClueImage from "./ClueImage";
 import TypewriterText from "./TypewriterText";
 import TimerBar from "./TimerBar";
@@ -8,36 +8,55 @@ import TimerBar from "./TimerBar";
 // ═══════════════════════════════════════════════════════
 export function StoryScene({ scene, onNext, onBack, audio }) {
   const [typingDone, setTypingDone] = useState(false);
+  const typingDoneRef = useRef(false); // ← thêm ref
 
   const handleComplete = useCallback(() => {
     setTypingDone(true);
+    typingDoneRef.current = true; // ← cập nhật ref
     audio.sfxReveal();
   }, [audio]);
 
+  // Reset khi scene mới
+  useEffect(() => {
+    setTypingDone(false);
+    typingDoneRef.current = false;
+  }, [scene.id]);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key !== "Enter") return;
+
+      if (!typingDoneRef.current) {
+        // Đang gõ → trigger click vào TypewriterText để skip
+        document.querySelector('[data-typewriter]')?.click();
+      } else {
+        // Xong rồi → next
+        onNext();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [onNext]); // ← không depend vào typingDone state, dùng ref thay thế
+
   return (
     <>
-      <div
-        style={{ flex: 1, position: "relative", overflow: "visible", display: "flex", alignItems: "center", justifyContent: "center", cursor: "default" }}
-      >
+      <div style={{ flex: 1, position: "relative", overflow: "visible", display: "flex", alignItems: "center", justifyContent: "center", cursor: "default" }}>
         {(scene.images || []).map((img, i) => (
           <ClueImage key={i} src={img.src} caption={img.caption} pos={img.pos} delay={0} />
         ))}
 
         <div
           onClick={() => { if (!typingDone) return; onNext(); }}
-          style={{ position: "relative", zIndex: 10, maxWidth: "480px", width: "100%", padding: "20px 24px", textAlign: "center", cursor: "default" }}
+          style={{ position: "relative", zIndex: 10, maxWidth: "480px", width: "100%", padding: "20px 24px", textAlign: "left", cursor: "default" }}
         >
           <SceneLabel label={scene.label} title={scene.title} />
-
-          <TypewriterText
-            lines={scene.lines}
-            onComplete={handleComplete}
-          />
+          <TypewriterText lines={scene.lines} onComplete={handleComplete} />
 
           {typingDone && (
             <div
               onClick={(e) => e.stopPropagation()}
-              style={{ marginTop: "22px", display: "flex", alignItems: "center", justifyContent: "center", gap: "24px" }}
+              style={{ marginTop: "22px", display: "flex", alignItems: "center", justifyContent: "flex-start", gap: "24px" }}
             >
               <BackButton onClick={onBack} />
               <div style={{ fontFamily: "var(--mono)", fontSize: "8px", letterSpacing: "2px", color: "var(--muted)", animation: "pulseHint 2s ease infinite" }}>
@@ -85,7 +104,7 @@ export function QuestionScene({ scene, onAnswer, onBack, audio }) {
           <ClueImage key={i} src={img.src} caption={img.caption} pos={img.pos} delay={i * 200} />
         ))}
 
-        <div style={{ position: "relative", zIndex: 10, maxWidth: "480px", width: "100%", padding: "20px 24px", textAlign: "center" }}>
+        <div style={{ position: "relative", zIndex: 10, maxWidth: "480px", width: "100%", padding: "20px 24px", textAlign: "left" }}>
           <div style={{ fontFamily: "var(--mono)", fontSize: "9px", letterSpacing: "3px", color: "rgba(201,168,112,0.6)", textTransform: "uppercase", marginBottom: "14px" }}>
             {scene.label}
           </div>
@@ -105,7 +124,17 @@ export function QuestionScene({ scene, onAnswer, onBack, audio }) {
           <BackButton onClick={onBack} />
         </div>
 
-        <div style={{ fontFamily: "var(--mono)", fontSize: "10px", letterSpacing: "2px", color: "var(--muted)", textTransform: "uppercase", textAlign: "center", marginBottom: "12px" }}>
+        <div style={{
+          fontFamily: "var(--serif)",       // ← đổi từ var(--mono) thành serif cho đẹp hơn
+          fontSize: "18px",                 // ← tăng từ 13px
+          letterSpacing: "0.5px",           // ← giảm letterSpacing
+          color: "var(--text)",             // ← sáng hơn, đổi từ var(--muted)
+          textTransform: "none",            // ← bỏ uppercase
+          textAlign: "center",
+          marginBottom: "16px",             // ← tăng margin
+          lineHeight: "1.6",                // ← thêm line height
+          fontStyle: "italic",              // ← thêm italic cho phong cách
+        }}>
           {scene.question}
         </div>
 

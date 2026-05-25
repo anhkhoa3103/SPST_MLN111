@@ -1,8 +1,3 @@
-// ═══════════════════════════════════════════════════════
-// NHÂN VẬT
-// Đổi avatar: thay null bằng 'img/char-duy.jpg'
-// ═══════════════════════════════════════════════════════
-
 export const CHARACTERS = {
   duy: {
     name: "Duy",
@@ -10,7 +5,7 @@ export const CHARACTERS = {
     role: "Kế toán nội bộ",
     color: "var(--duy)",
     avatar: `img/duy.jpg`,
-    desc: "Duy ít nói, cẩn thận, thường né giao tiếp khi căng thẳng.Trong 8 tháng, Duy đã biển thủ khoảng 500 triệu đồng từ công ty. Anh sống trong sợ hãi vì nghĩ Trọng sắp phát hiện. Duy không biết Trọng đã biết từ lâu và âm thầm xử lý một phần để khoản sai lệch không kéo Duy vào cuộc điều tra lớn hơn. Duy là người biết về phụ tử vì từng mua thuốc này ở một tiệm đông y tại Đà Lạt để ngâm rượu chữa đau lưng.Duy không biết Trọng bệnh.Duy không biết Trọng định làm gì trong đêm cuối cùng.",
+    desc: "Ít nói, cẩn thận, né giao tiếp khi căng thẳng.\n\nĐã biển thủ 500 triệu từ công ty trong 8 tháng — sống trong sợ hãi vì nghĩ Trọng sắp phát hiện. Không biết Trọng đã biết và đang âm thầm bảo vệ mình.\n\nBiết về phụ tử vì từng mua ở tiệm đông y Đà Lạt. Không biết Trọng bệnh.",
   },
 
   trong: {
@@ -19,7 +14,7 @@ export const CHARACTERS = {
     role: "Môi giới bất động sản",
     color: "rgba(200,200,200,0.4)",
     avatar: `img/trong.jpg`,
-    desc: "Trọng là người anh lớn trong nhóm bạn từ thời đại học. Anh thường lo cho người khác trước khi lo cho mình. Hay trả tiền trước. Hay im lặng đúng lúc. Hay giấu những chuyện nặng nề để người khác không phải gánh. Hiện tại, Trọng đang bị điều tra tham nhũng. Việc khởi tố có thể xảy ra trong vài tuần. Nếu bị khởi tố, tài sản của anh sẽ bị phong tỏa, bao gồm phần vốn trong dự án Đà Lạt. Điều đó sẽ khiến Phát mất khả năng xoay nợ, còn Duy có thể bị kéo vào những sai phạm sổ sách.Trọng cũng mắc ung thư tụy giai đoạn cuối. Anh biết mình không còn nhiều thời gian. Trọng biết lô đất Đà Lạt có vấn đề địa chất và có khả năng không qua thẩm định. Anh muốn rút khỏi dự án, nhưng không biết phải nói với Phát thế nào.",
+    desc: "Người anh lớn trong nhóm — hay lo cho người khác trước khi lo cho mình.\n\nĐang bị điều tra tham nhũng, sắp bị khởi tố. Mắc ung thư tụy giai đoạn cuối. Biết lô đất Đà Lạt có vấn đề địa chất nhưng không biết cách nói với Phát.\n\nĐã nói với vợ sẽ đi xa một thời gian.",
   },
 
   phat: {
@@ -28,6 +23,6 @@ export const CHARACTERS = {
     role: "Đối tác kinh doanh",
     color: "var(--phat)",
     avatar: `img/phat.jpg`,
-    desc: "Phát tự tin, hay cười, nói nhiều, nhưng dễ mất bình tĩnh khi bị dồn vào chân tường.Anh đang nợ ngân hàng 3.4 tỷ đồng, đáo hạn trong 6 tuần. Lô đất Đà Lạt là tài sản thế chấp duy nhất có thể giúp anh xoay tiền.Phát không biết đất có vấn đề địa chất.Phát không biết Trọng bệnh.Phát không biết Trọng đang cố tìm cách bảo vệ mình.Anh chỉ biết một điều: nếu Trọng rút khỏi dự án, anh có thể mất tất cả.",
+    desc: "Tự tin, hay cười, nhưng dễ mất bình tĩnh khi bị dồn vào chân tường.\n\nĐang nợ 3.4 tỷ, đáo hạn 6 tuần. Lô đất Đà Lạt là tài sản duy nhất có thể xoay tiền.\n\nKhông biết đất có vấn đề. Không biết Trọng bệnh. Chỉ biết: nếu Trọng rút, anh mất tất cả.",
   },
 };
